@@ -1,0 +1,19 @@
+# --- Environment variables ---
+.env.example
+
+# --- Browser automation data ---
+data/profile/
+data/cookies.json
+
+# --- Go build artifacts ---
+/auth
+*.exe
+*.out
+
+# --- Go tooling ---
+coverage.out
+
+# --- OS / editor ---
+.DS_Store
+.idea/
+.vscode/
