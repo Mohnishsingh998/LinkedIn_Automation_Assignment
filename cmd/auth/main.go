@@ -11,15 +11,10 @@ func main() {
 	br := browser.NewBrowser()
 	page := br.MustPage()
 
-	if auth.LoadCookies(page) {
-		log.Println("Cookies loaded")
+	if err := auth.Authenticate(page); err != nil {
+		log.Fatal(err)
 	}
 
-	if auth.IsLoggedIn(page) {
-		log.Println("Session is authenticated")
-	} else {
-		log.Println("Session is NOT authenticated")
-	}
-
+	log.Println("Authenticated successfully")
 	select {}
 }
