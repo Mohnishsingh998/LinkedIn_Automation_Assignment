@@ -12,9 +12,10 @@ func main() {
 	page := br.MustPage()
 
 	if err := auth.Authenticate(page); err != nil {
-		log.Fatal(err)
-	}
+	log.Fatal(err)
+}
 
-	log.Println("Authenticated successfully")
-	select {}
+log.Println("Authenticated successfully")
+select {}
+
 }
